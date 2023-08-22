@@ -1,0 +1,22 @@
+
+GET http://localhost:3000/routes
+
+###
+GET http://localhost:3000/routes/1
+
+###
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+    "name": "route test 1",
+    "source_id": "1",
+    "destination_id": "2"
+}
+
+### Googles Maps
+### Pegar o place ID
+GET http://localhost:3000/places?text=av doutor presidente dutra , 3150
+
+### Pegar direções entre dois pontos
+GET http://localhost:3000/directions?originId=EjxBdi4gZGEgU2F1ZGFkZSwgMzE1LCBGcmFuY28gZGEgUm9jaGEgLSBTUCwgMDc4NTMtMDMwLCBCcmFzaWwiMRIvChQKEgmvrj3CN-TOlBF_6A1kRPGz2xC7AioUChIJ1TMJJTXkzpQRgZzf9BkffRs&destinationId=ChIJ0TqRrzyJzpQRbXnRhkTfVgI
