@@ -9,9 +9,9 @@ POST http://localhost:3000/routes
 Content-Type: application/json
 
 {
-    "name": "route test 1",
-    "source_id": "1",
-    "destination_id": "2"
+    "name": "route for GRU",
+    "source_id": "EjxBdi4gZGEgU2F1ZGFkZSwgMzE1LCBGcmFuY28gZGEgUm9jaGEgLSBTUCwgMDc4NTMtMDMwLCBCcmFzaWwiMRIvChQKEgmvrj3CN-TOlBF_6A1kRPGz2xC7AioUChIJ1TMJJTXkzpQRgZzf9BkffRs",
+    "destination_id": "ChIJ0TqRrzyJzpQRbXnRhkTfVgI"
 }
 
 ### Googles Maps
