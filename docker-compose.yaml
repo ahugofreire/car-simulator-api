@@ -8,16 +8,18 @@ services:
       - "3000:3000"
     volumes:
       - .:/home/node/app
-  db: 
+  db:
     image: bitnami/mongodb:5.0.17
-    volumes: 
+    volumes:
       - mongodb_data:/bitnami/mongodb
     environment:
       MONGODB_ROOT_PASSWORD: root
       MONGODB_REPLICA_SET_MODE: primary
       MONGODB_REPLICA_SET_KEY: 123456
       MONGODB_DATABASE: car_simulator_db
+  redis:
+    image: redis:7.0.8-alpine
 
-volumes: 
+volumes:
   mongodb_data:
-    driver: local    
+    driver: local
