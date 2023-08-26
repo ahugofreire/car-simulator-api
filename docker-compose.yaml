@@ -8,18 +8,21 @@ services:
       - "3000:3000"
     volumes:
       - .:/home/node/app
-  db:
-    image: bitnami/mongodb:5.0.17
-    volumes:
-      - mongodb_data:/bitnami/mongodb
-    environment:
-      MONGODB_ROOT_PASSWORD: root
-      MONGODB_REPLICA_SET_MODE: primary
-      MONGODB_REPLICA_SET_KEY: 123456
-      MONGODB_DATABASE: car_simulator_db
+    networks:
+      - network1
+    # extra_hosts:
+    #   - "host.docker.internal:172.17.0.1"
   redis:
-    image: redis:7.0.8-alpine
+    image: redis:latest
+    container_name: redis
+    networks:
+      - network1
 
 volumes:
   mongodb_data:
     driver: local
+
+networks:
+  network1:
+    name: car-simulator-kafka_internal-kafka-network
+    external: true
