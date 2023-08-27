@@ -5,6 +5,9 @@ GET http://localhost:3000/routes
 GET http://localhost:3000/routes/1
 
 ###
+DELETE http://localhost:3000/routes/64e95284f839260d092436d8
+
+###
 POST http://localhost:3000/routes
 Content-Type: application/json
 

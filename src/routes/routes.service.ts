@@ -77,7 +77,9 @@ export class RoutesService {
     return `This action updates a #${id} route`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} route`;
+  async remove(id: string) {
+    return this.prismaService.route.delete({
+      where: { id },
+    });
   }
 }

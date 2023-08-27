@@ -59,7 +59,7 @@ export class RoutesDriverService {
     if (countRouteDriver === 0) {
       this.routeStartedCounter.inc();
       await this.kafkaProducerQueue.add({
-        event: 'RouteStared',
+        event: 'RouteStarted',
         id: routeDriver.route.id,
         name: routeDriver.route.name,
         lat: dto.lat,
@@ -86,7 +86,7 @@ export class RoutesDriverService {
       await this.kafkaProducerQueue.add({
         event: 'RouteFinished',
         id: routeDriver.route.id,
-        name: routeDriver.route.id,
+        name: routeDriver.route.name,
         finished_at: new Date().toISOString(),
         lat: dto.lat,
         lng: dto.lng,
